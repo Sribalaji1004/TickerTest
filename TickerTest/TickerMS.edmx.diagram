@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ea16be2fae0244b79596889739a9696b" Name="Diagram1">
+        <EntityTypeShape EntityType="SportsDataQAModel.ColorType" Width="1.5" PointX="5.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.GroupingColor" Width="1.5" PointX="8" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.GroupingImage" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.GroupingType" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.ImageType" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.League" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.SportColor" Width="1.5" PointX="8" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.SportImage" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.Sport" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.TeamColor" Width="1.5" PointX="8" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.TeamImage" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.Team" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.sysdiagram" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsDataQAModel.zPlayer" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="SportsDataQAModel.FK_GroupingColor_ColorType" ManuallyRouted="false" />
+        <AssociationConnector Association="SportsDataQAModel.FK_SportColor_ColorType" ManuallyRouted="false" />
+        <AssociationConnector Association="SportsDataQAModel.FK_TeamColor_ColorType" ManuallyRouted="false" />
+        <AssociationConnector Association="SportsDataQAModel.FK_GroupingImages_ImageType" ManuallyRouted="false" />
+        <AssociationConnector Association="SportsDataQAModel.FK_SportImages_ImageType" ManuallyRouted="false" />
+        <AssociationConnector Association="SportsDataQAModel.FK_TeamImages_ImageType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

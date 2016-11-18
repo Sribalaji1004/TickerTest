@@ -1,0 +1,1054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SportsDataQAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ColorType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="GroupingColors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HEX" Type="nchar" MaxLength="10" />
+          <Property Name="RGB" Type="nchar" MaxLength="20" />
+          <Property Name="TypeID" Type="int" />
+          <Property Name="OwnerID" Type="int" />
+          <Property Name="Hidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GroupingImages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nchar" MaxLength="50" />
+          <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="OwnerID" Type="int" Nullable="false" />
+          <Property Name="Hidden" Type="bit" Nullable="false" />
+          <Property Name="Path" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="GroupingTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImageType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Leagues">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="SportID" Type="int" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameLong" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameShort" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="HivePrefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="GroupingTypeId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SportsDataQA.dbo.Splits' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Splits">
+          <Property Name="ID" Type="smallint" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="ShortDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <EntityType Name="SportColors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HEX" Type="nchar" MaxLength="10" />
+          <Property Name="RGB" Type="nchar" MaxLength="20" />
+          <Property Name="TypeID" Type="int" />
+          <Property Name="OwnerID" Type="int" />
+          <Property Name="Hidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SportImages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nchar" MaxLength="50" />
+          <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="OwnerID" Type="int" Nullable="false" />
+          <Property Name="Hidden" Type="bit" Nullable="false" />
+          <Property Name="Path" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Sports">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SportsDataQA.dbo.sysdiagrams' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TeamColors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HEX" Type="nchar" MaxLength="10" />
+          <Property Name="RGB" Type="nchar" MaxLength="20" />
+          <Property Name="TypeID" Type="int" />
+          <Property Name="OwnerID" Type="int" />
+          <Property Name="Hidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TeamImages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nchar" MaxLength="50" />
+          <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="OwnerID" Type="int" Nullable="false" />
+          <Property Name="Hidden" Type="bit" Nullable="false" />
+          <Property Name="Path" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Teams">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SportID" Type="int" />
+          <Property Name="LeagueID" Type="int" />
+          <Property Name="SourceTeamID" Type="int" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="20" />
+          <Property Name="DisplayAbbreviation" Type="nvarchar" MaxLength="10" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CityAndState" Type="nvarchar" MaxLength="50" />
+          <Property Name="Stadium" Type="nvarchar" MaxLength="50" />
+          <Property Name="Capacity" Type="int" />
+          <Property Name="Surface" Type="nvarchar" MaxLength="20" />
+          <Property Name="Dome" Type="bit" />
+          <Property Name="Ranking" Type="smallint" />
+          <Property Name="Wins" Type="smallint" />
+          <Property Name="Losses" Type="smallint" />
+          <Property Name="Ties" Type="smallint" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryCode" Type="nchar" MaxLength="10" />
+          <Property Name="StatsIncAbbreviation" Type="nvarchar" MaxLength="20" />
+          <Property Name="OptaAbbreviation" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SportsDataQA.dbo.zBatting' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="zBatting">
+          <Property Name="PlayerID" Type="int" />
+          <Property Name="Time" Type="int" />
+          <Property Name="Split" Type="int" />
+          <Property Name="GamesPlayed" Type="smallint" />
+          <Property Name="GamesStarted" Type="smallint" />
+          <Property Name="AtBats" Type="smallint" />
+          <Property Name="LastAtBat" Type="nvarchar" MaxLength="30" />
+          <Property Name="HomeRuns" Type="smallint" />
+          <Property Name="Runs" Type="smallint" />
+          <Property Name="Pitches" Type="smallint" />
+          <Property Name="Hits" Type="smallint" />
+          <Property Name="Doubles" Type="smallint" />
+          <Property Name="Triples" Type="smallint" />
+          <Property Name="GrandSlams" Type="smallint" />
+          <Property Name="RunsBattedIn" Type="smallint" />
+          <Property Name="GameWinningRBIs" Type="smallint" />
+          <Property Name="GoAheadRBIs" Type="smallint" />
+          <Property Name="StolenBases" Type="smallint" />
+          <Property Name="CaughtStealing" Type="smallint" />
+          <Property Name="Walks" Type="smallint" />
+          <Property Name="HitByPitch" Type="smallint" />
+          <Property Name="IntentionalWalks" Type="smallint" />
+          <Property Name="SacrificeFlies" Type="smallint" />
+          <Property Name="SacrificeHits" Type="smallint" />
+          <Property Name="Strikeouts" Type="smallint" />
+          <Property Name="GroundIntoDoublePlay" Type="smallint" />
+          <Property Name="FlyOuts" Type="smallint" />
+          <Property Name="GroundOuts" Type="smallint" />
+          <Property Name="CatcherInterferences" Type="smallint" />
+          <Property Name="LeftOnBase" Type="smallint" />
+          <Property Name="Revision" Type="int" />
+          <Property Name="RevisionDate" Type="datetime" />
+          <Property Name="BoxScore" Type="nvarchar" MaxLength="60" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SportsDataQA.dbo.zFielding' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="zFielding">
+          <Property Name="PlayerID" Type="int" />
+          <Property Name="Position" Type="smallint" />
+          <Property Name="Time" Type="int" />
+          <Property Name="Split" Type="int" />
+          <Property Name="Games" Type="smallint" />
+          <Property Name="OutsOnField" Type="smallint" />
+          <Property Name="PutOuts" Type="smallint" />
+          <Property Name="Assists" Type="smallint" />
+          <Property Name="Errors" Type="smallint" />
+          <Property Name="DoublePlays" Type="smallint" />
+          <Property Name="TriplePlays" Type="smallint" />
+          <Property Name="PassedBalls" Type="smallint" />
+          <Property Name="GamesStarted" Type="smallint" />
+          <Property Name="BallsInZone" Type="smallint" />
+          <Property Name="OutsMade" Type="smallint" />
+          <Property Name="Hits" Type="smallint" />
+          <Property Name="TotalBases" Type="smallint" />
+          <Property Name="DoublePlaysStarted" Type="smallint" />
+          <Property Name="InningsPlayed" Type="int" />
+          <Property Name="CaughtStealing" Type="int" />
+          <Property Name="StolenBasesAllowed" Type="int" />
+          <Property Name="OutfieldAssists" Type="int" />
+          <Property Name="Revision" Type="int" />
+          <Property Name="RevisionDate" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SportsDataQA.dbo.zPitching' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="zPitching">
+          <Property Name="PlayerID" Type="smallint" />
+          <Property Name="Time" Type="smallint" />
+          <Property Name="Split" Type="smallint" />
+          <Property Name="Wins" Type="smallint" />
+          <Property Name="Losses" Type="smallint" />
+          <Property Name="Games" Type="smallint" />
+          <Property Name="GamesStarted" Type="smallint" />
+          <Property Name="GamesFinished" Type="smallint" />
+          <Property Name="CompleteGames" Type="smallint" />
+          <Property Name="ShutOuts" Type="smallint" />
+          <Property Name="Saves" Type="smallint" />
+          <Property Name="InningsComplete" Type="smallint" />
+          <Property Name="InningsFractions" Type="smallint" />
+          <Property Name="Hits" Type="smallint" />
+          <Property Name="BattersFaced" Type="smallint" />
+          <Property Name="Runs" Type="smallint" />
+          <Property Name="EarnedRuns" Type="smallint" />
+          <Property Name="HomeRuns" Type="smallint" />
+          <Property Name="SacrificeFlies" Type="smallint" />
+          <Property Name="SacrificeHits" Type="smallint" />
+          <Property Name="Walks" Type="smallint" />
+          <Property Name="IntentionalWalks" Type="smallint" />
+          <Property Name="BattersHit" Type="smallint" />
+          <Property Name="Strikeouts" Type="smallint" />
+          <Property Name="Balls" Type="smallint" />
+          <Property Name="Strikes" Type="smallint" />
+          <Property Name="WildPitches" Type="smallint" />
+          <Property Name="Balks" Type="smallint" />
+          <Property Name="Pickoffs" Type="smallint" />
+          <Property Name="Doubles" Type="smallint" />
+          <Property Name="Triples" Type="smallint" />
+          <Property Name="RunnersBattedIn" Type="smallint" />
+          <Property Name="StolenBases" Type="smallint" />
+          <Property Name="CaughtStealing" Type="smallint" />
+          <Property Name="GroundIntoDoublePlays" Type="smallint" />
+          <Property Name="FlyOuts" Type="smallint" />
+          <Property Name="GroundOuts" Type="smallint" />
+          <Property Name="SaveOpportunities" Type="smallint" />
+          <Property Name="RunsFor" Type="smallint" />
+          <Property Name="Holds" Type="smallint" />
+          <Property Name="CatcherInterferences" Type="smallint" />
+          <Property Name="FirstPitchStrikes" Type="int" />
+          <Property Name="Revision" Type="int" />
+          <Property Name="RevisionDate" Type="datetime" />
+          <Property Name="Pitches" Type="int" />
+          <Property Name="StrikeoutLine" Type="nvarchar" MaxLength="30" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SportsDataQA.dbo.zPlayers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="zPlayers">
+          <Key>
+            <PropertyRef Name="Pitcher" />
+            <PropertyRef Name="Rookie" />
+            <PropertyRef Name="LeftHanded" />
+            <PropertyRef Name="RightHanded" />
+            <PropertyRef Name="PinchHitter" />
+            <PropertyRef Name="AllStar" />
+          </Key>
+          <Property Name="ID" Type="int" />
+          <Property Name="TeamID" Type="smallint" />
+          <Property Name="LeagueID" Type="smallint" />
+          <Property Name="LinkID" Type="int" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="20" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Character" Type="nvarchar" MaxLength="1" />
+          <Property Name="AlternateCharacter" Type="nvarchar" MaxLength="1" />
+          <Property Name="Position" Type="int" />
+          <Property Name="PrimaryPosition" Type="int" />
+          <Property Name="BattingOrder" Type="int" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pitcher" Type="bit" Nullable="false" />
+          <Property Name="Rookie" Type="bit" Nullable="false" />
+          <Property Name="LeftHanded" Type="bit" Nullable="false" />
+          <Property Name="RightHanded" Type="bit" Nullable="false" />
+          <Property Name="PinchHitter" Type="bit" Nullable="false" />
+          <Property Name="HitZone" Type="nvarchar" MaxLength="10" />
+          <Property Name="Jersey" Type="int" />
+          <Property Name="DisplayJersey" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Weight" Type="int" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="Throws" Type="int" />
+          <Property Name="Bats" Type="int" />
+          <Property Name="Revision" Type="int" />
+          <Property Name="RevisionDate" Type="datetime" />
+          <Property Name="AllStar" Type="bit" Nullable="false" />
+          <Property Name="Eligibility" Type="int" />
+          <Property Name="TwitterHandle" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SportsDataQA.dbo.zTimes' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="zTimes">
+          <Property Name="ID" Type="smallint" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShortDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <Association Name="FK_GroupingColor_ColorType">
+          <End Role="ColorType" Type="Self.ColorType" Multiplicity="0..1" />
+          <End Role="GroupingColors" Type="Self.GroupingColors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColorType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupingColors">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupingImages_ImageType">
+          <End Role="ImageType" Type="Self.ImageType" Multiplicity="1" />
+          <End Role="GroupingImages" Type="Self.GroupingImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupingImages">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SportColor_ColorType">
+          <End Role="ColorType" Type="Self.ColorType" Multiplicity="0..1" />
+          <End Role="SportColors" Type="Self.SportColors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColorType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SportColors">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SportImages_ImageType">
+          <End Role="ImageType" Type="Self.ImageType" Multiplicity="1" />
+          <End Role="SportImages" Type="Self.SportImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SportImages">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamColor_ColorType">
+          <End Role="ColorType" Type="Self.ColorType" Multiplicity="0..1" />
+          <End Role="TeamColors" Type="Self.TeamColors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColorType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TeamColors">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamImages_ImageType">
+          <End Role="ImageType" Type="Self.ImageType" Multiplicity="1" />
+          <End Role="TeamImages" Type="Self.TeamImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TeamImages">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SportsDataQAModelStoreContainer">
+          <EntitySet Name="ColorType" EntityType="Self.ColorType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupingColors" EntityType="Self.GroupingColors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupingImages" EntityType="Self.GroupingImages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupingTypes" EntityType="Self.GroupingTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImageType" EntityType="Self.ImageType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Leagues" EntityType="Self.Leagues" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SportColors" EntityType="Self.SportColors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SportImages" EntityType="Self.SportImages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sports" EntityType="Self.Sports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeamColors" EntityType="Self.TeamColors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeamImages" EntityType="Self.TeamImages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teams" EntityType="Self.Teams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[sysdiagrams].[name] AS [name], 
+[sysdiagrams].[principal_id] AS [principal_id], 
+[sysdiagrams].[diagram_id] AS [diagram_id], 
+[sysdiagrams].[version] AS [version], 
+[sysdiagrams].[definition] AS [definition]
+FROM [dbo].[sysdiagrams] AS [sysdiagrams]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="zPlayers" EntityType="Self.zPlayers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[zPlayers].[ID] AS [ID], 
+[zPlayers].[TeamID] AS [TeamID], 
+[zPlayers].[LeagueID] AS [LeagueID], 
+[zPlayers].[LinkID] AS [LinkID], 
+[zPlayers].[FirstName] AS [FirstName], 
+[zPlayers].[LastName] AS [LastName], 
+[zPlayers].[DisplayName] AS [DisplayName], 
+[zPlayers].[Character] AS [Character], 
+[zPlayers].[AlternateCharacter] AS [AlternateCharacter], 
+[zPlayers].[Position] AS [Position], 
+[zPlayers].[PrimaryPosition] AS [PrimaryPosition], 
+[zPlayers].[BattingOrder] AS [BattingOrder], 
+[zPlayers].[DateOfBirth] AS [DateOfBirth], 
+[zPlayers].[City] AS [City], 
+[zPlayers].[State] AS [State], 
+[zPlayers].[Pitcher] AS [Pitcher], 
+[zPlayers].[Rookie] AS [Rookie], 
+[zPlayers].[LeftHanded] AS [LeftHanded], 
+[zPlayers].[RightHanded] AS [RightHanded], 
+[zPlayers].[PinchHitter] AS [PinchHitter], 
+[zPlayers].[HitZone] AS [HitZone], 
+[zPlayers].[Jersey] AS [Jersey], 
+[zPlayers].[DisplayJersey] AS [DisplayJersey], 
+[zPlayers].[Status] AS [Status], 
+[zPlayers].[Height] AS [Height], 
+[zPlayers].[Weight] AS [Weight], 
+[zPlayers].[Experience] AS [Experience], 
+[zPlayers].[Throws] AS [Throws], 
+[zPlayers].[Bats] AS [Bats], 
+[zPlayers].[Revision] AS [Revision], 
+[zPlayers].[RevisionDate] AS [RevisionDate], 
+[zPlayers].[AllStar] AS [AllStar], 
+[zPlayers].[Eligibility] AS [Eligibility], 
+[zPlayers].[TwitterHandle] AS [TwitterHandle]
+FROM [dbo].[zPlayers] AS [zPlayers]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_GroupingColor_ColorType" Association="Self.FK_GroupingColor_ColorType">
+            <End Role="ColorType" EntitySet="ColorType" />
+            <End Role="GroupingColors" EntitySet="GroupingColors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupingImages_ImageType" Association="Self.FK_GroupingImages_ImageType">
+            <End Role="ImageType" EntitySet="ImageType" />
+            <End Role="GroupingImages" EntitySet="GroupingImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SportColor_ColorType" Association="Self.FK_SportColor_ColorType">
+            <End Role="ColorType" EntitySet="ColorType" />
+            <End Role="SportColors" EntitySet="SportColors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SportImages_ImageType" Association="Self.FK_SportImages_ImageType">
+            <End Role="ImageType" EntitySet="ImageType" />
+            <End Role="SportImages" EntitySet="SportImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamColor_ColorType" Association="Self.FK_TeamColor_ColorType">
+            <End Role="ColorType" EntitySet="ColorType" />
+            <End Role="TeamColors" EntitySet="TeamColors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamImages_ImageType" Association="Self.FK_TeamImages_ImageType">
+            <End Role="ImageType" EntitySet="ImageType" />
+            <End Role="TeamImages" EntitySet="TeamImages" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SportsDataQAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ColorType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="GroupingColors" Relationship="Self.FK_GroupingColor_ColorType" FromRole="ColorType" ToRole="GroupingColors" />
+          <NavigationProperty Name="SportColors" Relationship="Self.FK_SportColor_ColorType" FromRole="ColorType" ToRole="SportColors" />
+          <NavigationProperty Name="TeamColors" Relationship="Self.FK_TeamColor_ColorType" FromRole="ColorType" ToRole="TeamColors" />
+        </EntityType>
+        <EntityType Name="GroupingColor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEX" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RGB" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="TypeID" Type="Int32" />
+          <Property Name="OwnerID" Type="Int32" />
+          <Property Name="Hidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ColorType" Relationship="Self.FK_GroupingColor_ColorType" FromRole="GroupingColors" ToRole="ColorType" />
+        </EntityType>
+        <EntityType Name="GroupingImage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TypeID" Type="Int32" Nullable="false" />
+          <Property Name="OwnerID" Type="Int32" Nullable="false" />
+          <Property Name="Hidden" Type="Boolean" Nullable="false" />
+          <Property Name="Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ImageType" Relationship="Self.FK_GroupingImages_ImageType" FromRole="GroupingImages" ToRole="ImageType" />
+        </EntityType>
+        <EntityType Name="GroupingType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImageType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="GroupingImages" Relationship="Self.FK_GroupingImages_ImageType" FromRole="ImageType" ToRole="GroupingImages" />
+          <NavigationProperty Name="SportImages" Relationship="Self.FK_SportImages_ImageType" FromRole="ImageType" ToRole="SportImages" />
+          <NavigationProperty Name="TeamImages" Relationship="Self.FK_TeamImages_ImageType" FromRole="ImageType" ToRole="TeamImages" />
+        </EntityType>
+        <EntityType Name="League">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="SportID" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameLong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NameShort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="HivePrefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GroupingTypeId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SportColor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEX" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RGB" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="TypeID" Type="Int32" />
+          <Property Name="OwnerID" Type="Int32" />
+          <Property Name="Hidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ColorType" Relationship="Self.FK_SportColor_ColorType" FromRole="SportColors" ToRole="ColorType" />
+        </EntityType>
+        <EntityType Name="SportImage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TypeID" Type="Int32" Nullable="false" />
+          <Property Name="OwnerID" Type="Int32" Nullable="false" />
+          <Property Name="Hidden" Type="Boolean" Nullable="false" />
+          <Property Name="Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ImageType" Relationship="Self.FK_SportImages_ImageType" FromRole="SportImages" ToRole="ImageType" />
+        </EntityType>
+        <EntityType Name="Sport">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TeamColor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEX" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RGB" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="TypeID" Type="Int32" />
+          <Property Name="OwnerID" Type="Int32" />
+          <Property Name="Hidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ColorType" Relationship="Self.FK_TeamColor_ColorType" FromRole="TeamColors" ToRole="ColorType" />
+        </EntityType>
+        <EntityType Name="TeamImage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TypeID" Type="Int32" Nullable="false" />
+          <Property Name="OwnerID" Type="Int32" Nullable="false" />
+          <Property Name="Hidden" Type="Boolean" Nullable="false" />
+          <Property Name="Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ImageType" Relationship="Self.FK_TeamImages_ImageType" FromRole="TeamImages" ToRole="ImageType" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SportID" Type="Int32" />
+          <Property Name="LeagueID" Type="Int32" />
+          <Property Name="SourceTeamID" Type="Int32" />
+          <Property Name="Abbreviation" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayAbbreviation" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CityAndState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stadium" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacity" Type="Int32" />
+          <Property Name="Surface" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Dome" Type="Boolean" />
+          <Property Name="Ranking" Type="Int16" />
+          <Property Name="Wins" Type="Int16" />
+          <Property Name="Losses" Type="Int16" />
+          <Property Name="Ties" Type="Int16" />
+          <Property Name="Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="StatsIncAbbreviation" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OptaAbbreviation" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="zPlayer">
+          <Key>
+            <PropertyRef Name="Pitcher" />
+            <PropertyRef Name="Rookie" />
+            <PropertyRef Name="LeftHanded" />
+            <PropertyRef Name="RightHanded" />
+            <PropertyRef Name="PinchHitter" />
+            <PropertyRef Name="AllStar" />
+          </Key>
+          <Property Name="ID" Type="Int32" />
+          <Property Name="TeamID" Type="Int16" />
+          <Property Name="LeagueID" Type="Int16" />
+          <Property Name="LinkID" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Character" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="AlternateCharacter" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="Int32" />
+          <Property Name="PrimaryPosition" Type="Int32" />
+          <Property Name="BattingOrder" Type="Int32" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pitcher" Type="Boolean" Nullable="false" />
+          <Property Name="Rookie" Type="Boolean" Nullable="false" />
+          <Property Name="LeftHanded" Type="Boolean" Nullable="false" />
+          <Property Name="RightHanded" Type="Boolean" Nullable="false" />
+          <Property Name="PinchHitter" Type="Boolean" Nullable="false" />
+          <Property Name="HitZone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Jersey" Type="Int32" />
+          <Property Name="DisplayJersey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Weight" Type="Int32" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="Throws" Type="Int32" />
+          <Property Name="Bats" Type="Int32" />
+          <Property Name="Revision" Type="Int32" />
+          <Property Name="RevisionDate" Type="DateTime" Precision="3" />
+          <Property Name="AllStar" Type="Boolean" Nullable="false" />
+          <Property Name="Eligibility" Type="Int32" />
+          <Property Name="TwitterHandle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_GroupingColor_ColorType">
+          <End Role="ColorType" Type="Self.ColorType" Multiplicity="0..1" />
+          <End Role="GroupingColors" Type="Self.GroupingColor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColorType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupingColors">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SportColor_ColorType">
+          <End Role="ColorType" Type="Self.ColorType" Multiplicity="0..1" />
+          <End Role="SportColors" Type="Self.SportColor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColorType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SportColors">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamColor_ColorType">
+          <End Role="ColorType" Type="Self.ColorType" Multiplicity="0..1" />
+          <End Role="TeamColors" Type="Self.TeamColor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColorType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TeamColors">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupingImages_ImageType">
+          <End Role="ImageType" Type="Self.ImageType" Multiplicity="1" />
+          <End Role="GroupingImages" Type="Self.GroupingImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupingImages">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SportImages_ImageType">
+          <End Role="ImageType" Type="Self.ImageType" Multiplicity="1" />
+          <End Role="SportImages" Type="Self.SportImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SportImages">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamImages_ImageType">
+          <End Role="ImageType" Type="Self.ImageType" Multiplicity="1" />
+          <End Role="TeamImages" Type="Self.TeamImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TeamImages">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SportsDataQAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ColorTypes" EntityType="Self.ColorType" />
+          <EntitySet Name="GroupingColors" EntityType="Self.GroupingColor" />
+          <EntitySet Name="GroupingImages" EntityType="Self.GroupingImage" />
+          <EntitySet Name="GroupingTypes" EntityType="Self.GroupingType" />
+          <EntitySet Name="ImageTypes" EntityType="Self.ImageType" />
+          <EntitySet Name="Leagues" EntityType="Self.League" />
+          <EntitySet Name="SportColors" EntityType="Self.SportColor" />
+          <EntitySet Name="SportImages" EntityType="Self.SportImage" />
+          <EntitySet Name="Sports" EntityType="Self.Sport" />
+          <EntitySet Name="TeamColors" EntityType="Self.TeamColor" />
+          <EntitySet Name="TeamImages" EntityType="Self.TeamImage" />
+          <EntitySet Name="Teams" EntityType="Self.Team" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="zPlayers" EntityType="Self.zPlayer" />
+          <AssociationSet Name="FK_GroupingColor_ColorType" Association="Self.FK_GroupingColor_ColorType">
+            <End Role="ColorType" EntitySet="ColorTypes" />
+            <End Role="GroupingColors" EntitySet="GroupingColors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SportColor_ColorType" Association="Self.FK_SportColor_ColorType">
+            <End Role="ColorType" EntitySet="ColorTypes" />
+            <End Role="SportColors" EntitySet="SportColors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamColor_ColorType" Association="Self.FK_TeamColor_ColorType">
+            <End Role="ColorType" EntitySet="ColorTypes" />
+            <End Role="TeamColors" EntitySet="TeamColors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupingImages_ImageType" Association="Self.FK_GroupingImages_ImageType">
+            <End Role="ImageType" EntitySet="ImageTypes" />
+            <End Role="GroupingImages" EntitySet="GroupingImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SportImages_ImageType" Association="Self.FK_SportImages_ImageType">
+            <End Role="ImageType" EntitySet="ImageTypes" />
+            <End Role="SportImages" EntitySet="SportImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamImages_ImageType" Association="Self.FK_TeamImages_ImageType">
+            <End Role="ImageType" EntitySet="ImageTypes" />
+            <End Role="TeamImages" EntitySet="TeamImages" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SportsDataQAModelStoreContainer" CdmEntityContainer="SportsDataQAEntities">
+          <EntitySetMapping Name="ColorTypes">
+            <EntityTypeMapping TypeName="SportsDataQAModel.ColorType">
+              <MappingFragment StoreEntitySet="ColorType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupingColors">
+            <EntityTypeMapping TypeName="SportsDataQAModel.GroupingColor">
+              <MappingFragment StoreEntitySet="GroupingColors">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HEX" ColumnName="HEX" />
+                <ScalarProperty Name="RGB" ColumnName="RGB" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Hidden" ColumnName="Hidden" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupingImages">
+            <EntityTypeMapping TypeName="SportsDataQAModel.GroupingImage">
+              <MappingFragment StoreEntitySet="GroupingImages">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Hidden" ColumnName="Hidden" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupingTypes">
+            <EntityTypeMapping TypeName="SportsDataQAModel.GroupingType">
+              <MappingFragment StoreEntitySet="GroupingTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImageTypes">
+            <EntityTypeMapping TypeName="SportsDataQAModel.ImageType">
+              <MappingFragment StoreEntitySet="ImageType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Leagues">
+            <EntityTypeMapping TypeName="SportsDataQAModel.League">
+              <MappingFragment StoreEntitySet="Leagues">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="SportID" ColumnName="SportID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="NameLong" ColumnName="NameLong" />
+                <ScalarProperty Name="NameShort" ColumnName="NameShort" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="HivePrefix" ColumnName="HivePrefix" />
+                <ScalarProperty Name="GroupingTypeId" ColumnName="GroupingTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SportColors">
+            <EntityTypeMapping TypeName="SportsDataQAModel.SportColor">
+              <MappingFragment StoreEntitySet="SportColors">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HEX" ColumnName="HEX" />
+                <ScalarProperty Name="RGB" ColumnName="RGB" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Hidden" ColumnName="Hidden" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SportImages">
+            <EntityTypeMapping TypeName="SportsDataQAModel.SportImage">
+              <MappingFragment StoreEntitySet="SportImages">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Hidden" ColumnName="Hidden" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sports">
+            <EntityTypeMapping TypeName="SportsDataQAModel.Sport">
+              <MappingFragment StoreEntitySet="Sports">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeamColors">
+            <EntityTypeMapping TypeName="SportsDataQAModel.TeamColor">
+              <MappingFragment StoreEntitySet="TeamColors">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HEX" ColumnName="HEX" />
+                <ScalarProperty Name="RGB" ColumnName="RGB" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Hidden" ColumnName="Hidden" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeamImages">
+            <EntityTypeMapping TypeName="SportsDataQAModel.TeamImage">
+              <MappingFragment StoreEntitySet="TeamImages">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Hidden" ColumnName="Hidden" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="SportsDataQAModel.Team">
+              <MappingFragment StoreEntitySet="Teams">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SportID" ColumnName="SportID" />
+                <ScalarProperty Name="LeagueID" ColumnName="LeagueID" />
+                <ScalarProperty Name="SourceTeamID" ColumnName="SourceTeamID" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="DisplayAbbreviation" ColumnName="DisplayAbbreviation" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="CityAndState" ColumnName="CityAndState" />
+                <ScalarProperty Name="Stadium" ColumnName="Stadium" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Surface" ColumnName="Surface" />
+                <ScalarProperty Name="Dome" ColumnName="Dome" />
+                <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+                <ScalarProperty Name="Wins" ColumnName="Wins" />
+                <ScalarProperty Name="Losses" ColumnName="Losses" />
+                <ScalarProperty Name="Ties" ColumnName="Ties" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="StatsIncAbbreviation" ColumnName="StatsIncAbbreviation" />
+                <ScalarProperty Name="OptaAbbreviation" ColumnName="OptaAbbreviation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SportsDataQAModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zPlayers">
+            <EntityTypeMapping TypeName="SportsDataQAModel.zPlayer">
+              <MappingFragment StoreEntitySet="zPlayers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="LeagueID" ColumnName="LeagueID" />
+                <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Character" ColumnName="Character" />
+                <ScalarProperty Name="AlternateCharacter" ColumnName="AlternateCharacter" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="PrimaryPosition" ColumnName="PrimaryPosition" />
+                <ScalarProperty Name="BattingOrder" ColumnName="BattingOrder" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Pitcher" ColumnName="Pitcher" />
+                <ScalarProperty Name="Rookie" ColumnName="Rookie" />
+                <ScalarProperty Name="LeftHanded" ColumnName="LeftHanded" />
+                <ScalarProperty Name="RightHanded" ColumnName="RightHanded" />
+                <ScalarProperty Name="PinchHitter" ColumnName="PinchHitter" />
+                <ScalarProperty Name="HitZone" ColumnName="HitZone" />
+                <ScalarProperty Name="Jersey" ColumnName="Jersey" />
+                <ScalarProperty Name="DisplayJersey" ColumnName="DisplayJersey" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Throws" ColumnName="Throws" />
+                <ScalarProperty Name="Bats" ColumnName="Bats" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="RevisionDate" ColumnName="RevisionDate" />
+                <ScalarProperty Name="AllStar" ColumnName="AllStar" />
+                <ScalarProperty Name="Eligibility" ColumnName="Eligibility" />
+                <ScalarProperty Name="TwitterHandle" ColumnName="TwitterHandle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

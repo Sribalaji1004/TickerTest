@@ -1,0 +1,2601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NeoCableMsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.103audio' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="103audio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.103ctrl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="103ctrl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.103video' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="103video">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Audits' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Audits">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userEmail" Type="varchar(max)" />
+          <Property Name="operation" Type="varchar(max)" />
+          <Property Name="olddata" Type="varchar(max)" />
+          <Property Name="newdata" Type="varchar(max)" />
+          <Property Name="datetime" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Buildings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Buildings">
+          <Key>
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="BuildingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Buildings1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Buildings1">
+          <Key>
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="BuildingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Cables' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cables">
+          <Key>
+            <PropertyRef Name="CableID" />
+            <PropertyRef Name="SrcEquipmentID" />
+            <PropertyRef Name="SrcConnectorTypeID" />
+            <PropertyRef Name="DestEquipmentID" />
+            <PropertyRef Name="DestConnectorTypeID" />
+            <PropertyRef Name="CableTypeID" />
+            <PropertyRef Name="Length" />
+            <PropertyRef Name="CableCode" />
+            <PropertyRef Name="MaxPower" />
+          </Key>
+          <Property Name="CableID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SrcEquipmentID" Type="int" Nullable="false" />
+          <Property Name="SrcPort" Type="nvarchar(max)" />
+          <Property Name="SrcConnectorTypeID" Type="int" Nullable="false" />
+          <Property Name="SrcDrawingCode" Type="nvarchar(max)" />
+          <Property Name="DestEquipmentID" Type="int" Nullable="false" />
+          <Property Name="DestPort" Type="nvarchar(max)" />
+          <Property Name="DestConnectorTypeID" Type="int" Nullable="false" />
+          <Property Name="DestDrawingCode" Type="nvarchar(max)" />
+          <Property Name="CableTypeID" Type="int" Nullable="false" />
+          <Property Name="Color" Type="nvarchar(max)" />
+          <Property Name="Length" Type="int" Nullable="false" />
+          <Property Name="Detail" Type="nvarchar(max)" />
+          <Property Name="Revision" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastUpdatedBy" Type="nvarchar(max)" />
+          <Property Name="LastUpdateDate" Type="nvarchar(max)" />
+          <Property Name="CableCode" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Signal" Type="nvarchar(max)" />
+          <Property Name="SrcShield" Type="bit" />
+          <Property Name="DestShield" Type="bit" />
+          <Property Name="CableDetail" Type="nvarchar(max)" />
+          <Property Name="SrcHostName" Type="nvarchar(max)" />
+          <Property Name="SrcIPAddress" Type="nvarchar(max)" />
+          <Property Name="DestHostName" Type="nvarchar(max)" />
+          <Property Name="DestIPAddress" Type="nvarchar(max)" />
+          <Property Name="SubRevision" Type="nvarchar(max)" />
+          <Property Name="SrcMake" Type="nvarchar(max)" />
+          <Property Name="SrcModel" Type="nvarchar(max)" />
+          <Property Name="DestMake" Type="nvarchar(max)" />
+          <Property Name="DestModel" Type="nvarchar(max)" />
+          <Property Name="Panel" Type="nvarchar(max)" />
+          <Property Name="Circuit" Type="nvarchar(max)" />
+          <Property Name="PDU" Type="nvarchar(max)" />
+          <Property Name="MaxPower" Type="float" Nullable="false" />
+          <Property Name="ActionItem" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Cablesold' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cablesold">
+          <Key>
+            <PropertyRef Name="CableID" />
+            <PropertyRef Name="SrcEquipmentID" />
+            <PropertyRef Name="SrcConnectorTypeID" />
+            <PropertyRef Name="DestEquipmentID" />
+            <PropertyRef Name="DestConnectorTypeID" />
+            <PropertyRef Name="CableTypeID" />
+            <PropertyRef Name="Length" />
+            <PropertyRef Name="CableCode" />
+            <PropertyRef Name="MaxPower" />
+          </Key>
+          <Property Name="CableID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SrcEquipmentID" Type="int" Nullable="false" />
+          <Property Name="SrcPort" Type="nvarchar(max)" />
+          <Property Name="SrcConnectorTypeID" Type="int" Nullable="false" />
+          <Property Name="SrcDrawingCode" Type="nvarchar(max)" />
+          <Property Name="DestEquipmentID" Type="int" Nullable="false" />
+          <Property Name="DestPort" Type="nvarchar(max)" />
+          <Property Name="DestConnectorTypeID" Type="int" Nullable="false" />
+          <Property Name="DestDrawingCode" Type="nvarchar(max)" />
+          <Property Name="CableTypeID" Type="int" Nullable="false" />
+          <Property Name="Color" Type="nvarchar(max)" />
+          <Property Name="Length" Type="int" Nullable="false" />
+          <Property Name="Detail" Type="nvarchar(max)" />
+          <Property Name="Revision" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastUpdatedBy" Type="nvarchar(max)" />
+          <Property Name="LastUpdateDate" Type="nvarchar(max)" />
+          <Property Name="CableCode" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Signal" Type="nvarchar(max)" />
+          <Property Name="SrcShield" Type="bit" />
+          <Property Name="DestShield" Type="bit" />
+          <Property Name="CableDetail" Type="nvarchar(max)" />
+          <Property Name="SrcHostName" Type="nvarchar(max)" />
+          <Property Name="SrcIPAddress" Type="nvarchar(max)" />
+          <Property Name="DestHostName" Type="nvarchar(max)" />
+          <Property Name="DestIPAddress" Type="nvarchar(max)" />
+          <Property Name="SubRevision" Type="nvarchar(max)" />
+          <Property Name="SrcMake" Type="nvarchar(max)" />
+          <Property Name="SrcModel" Type="nvarchar(max)" />
+          <Property Name="DestMake" Type="nvarchar(max)" />
+          <Property Name="DestModel" Type="nvarchar(max)" />
+          <Property Name="Panel" Type="nvarchar(max)" />
+          <Property Name="Circuit" Type="nvarchar(max)" />
+          <Property Name="PDU" Type="nvarchar(max)" />
+          <Property Name="MaxPower" Type="float" Nullable="false" />
+          <Property Name="ActionItem" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.CableTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CableTypes">
+          <Key>
+            <PropertyRef Name="CableTypeID" />
+          </Key>
+          <Property Name="CableTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.CableTypesold' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CableTypesold">
+          <Key>
+            <PropertyRef Name="CableTypeID" />
+          </Key>
+          <Property Name="CableTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.castlists' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="castlists">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="First_name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Last_name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Specify_number" Type="nvarchar" MaxLength="10" />
+          <Property Name="Show_name" Type="nvarchar(max)" />
+          <Property Name="Type_of_Show" Type="nvarchar(max)" />
+          <Property Name="AppearedIn" Type="nvarchar(max)" />
+          <Property Name="Role_played" Type="nvarchar(max)" />
+          <Property Name="Credit" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.ConnectorTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ConnectorTypes">
+          <Key>
+            <PropertyRef Name="ConnectorTypeID" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="ConnectorTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.ConnectorTypesold' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ConnectorTypesold">
+          <Key>
+            <PropertyRef Name="ConnectorTypeID" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="ConnectorTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'NeoCableMs.dbo.Equipment$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Equipment$">
+          <Property Name="Bldg" Type="float" />
+          <Property Name="Room" Type="nvarchar" MaxLength="255" />
+          <Property Name="Rack" Type="nvarchar" MaxLength="255" />
+          <Property Name="Eqpt" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Equipments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Equipments">
+          <Key>
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Type" Type="nvarchar(max)" />
+          <Property Name="RackID" Type="int" Nullable="false" />
+          <Property Name="RoomID" Type="int" Nullable="false" />
+          <Property Name="EquipmentTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Equipmentsold' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Equipmentsold">
+          <Key>
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Type" Type="nvarchar(max)" />
+          <Property Name="RackID" Type="int" Nullable="false" />
+          <Property Name="RoomID" Type="int" Nullable="false" />
+          <Property Name="EquipmentTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.EquipmentTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EquipmentTypes">
+          <Key>
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.EquipmentTypes1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EquipmentTypes1">
+          <Key>
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Missing_Cables' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Missing_Cables">
+          <Key>
+            <PropertyRef Name="CableCode" />
+          </Key>
+          <Property Name="CableCode" Type="int" Nullable="false" />
+          <Property Name="Signal" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Nebaud' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Nebaud">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="s" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="color" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="order_his" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Nebctl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Nebctl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="s" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="color" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="order_his" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Nebctl2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Nebctl2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Nebvid' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Nebvid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="s" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="color" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="order_his" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PrintJobs">
+          <Key>
+            <PropertyRef Name="PrintJobID" />
+          </Key>
+          <Property Name="PrintJobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Token" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CablesToPrint" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'NeoCableMs.dbo.Rack$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rack$">
+          <Property Name="Bldg" Type="float" />
+          <Property Name="Room" Type="nvarchar" MaxLength="255" />
+          <Property Name="Rack" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Racks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Racks">
+          <Key>
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RackID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="RoomID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Racksold' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Racksold">
+          <Key>
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RackID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="RoomID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'NeoCableMs.dbo.Room$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Room$">
+          <Property Name="Bldg" Type="float" />
+          <Property Name="Room" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Rooms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Rooms">
+          <Key>
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="BuildingID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Rooms1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Rooms1">
+          <Key>
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="BuildingID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'NeoCableMs.dbo.test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test">
+          <Property Name="Cablecode" Type="int" />
+          <Property Name="Signal" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Totalaud' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Totalaud">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="s" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="color" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="nvarchar" MaxLength="255" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="order_his" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Totalctl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Totalctl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="s" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="color" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="order_his" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Totaljet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Totaljet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.Totalvid' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Totalvid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="cable" Type="int" />
+          <Property Name="s" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh1" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="src_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="color" Type="nvarchar" MaxLength="255" />
+          <Property Name="mult_pair" Type="nvarchar" MaxLength="255" />
+          <Property Name="lnth" Type="nvarchar" MaxLength="255" />
+          <Property Name="signal" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_equip" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_conn" Type="nvarchar" MaxLength="255" />
+          <Property Name="sh2" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dtl" Type="nvarchar" MaxLength="255" />
+          <Property Name="dst_dwg" Type="nvarchar" MaxLength="255" />
+          <Property Name="comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="chng" Type="datetime" />
+          <Property Name="order_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="order_his" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_fr" Type="nvarchar" MaxLength="255" />
+          <Property Name="append_dat" Type="datetime" />
+          <Property Name="feet" Type="int" />
+          <Property Name="lbl_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="_dbaselock" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NeoCableMs.dbo.UserRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="UserRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Role" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="NeoCableMsModelStoreContainer">
+          <EntitySet Name="PrintJobs" EntityType="Self.PrintJobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="103audio" EntityType="Self.103audio" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[103audio].[ID] AS [ID], 
+[103audio].[cable] AS [cable], 
+[103audio].[src_loc] AS [src_loc], 
+[103audio].[src_equip] AS [src_equip], 
+[103audio].[src_conn] AS [src_conn], 
+[103audio].[sh1] AS [sh1], 
+[103audio].[type] AS [type], 
+[103audio].[mult_pair] AS [mult_pair], 
+[103audio].[lnth] AS [lnth], 
+[103audio].[signal] AS [signal], 
+[103audio].[dst_loc] AS [dst_loc], 
+[103audio].[dst_equip] AS [dst_equip], 
+[103audio].[dst_conn] AS [dst_conn], 
+[103audio].[sh2] AS [sh2], 
+[103audio].[comments] AS [comments], 
+[103audio].[chng] AS [chng], 
+[103audio].[order_num] AS [order_num], 
+[103audio].[append_fr] AS [append_fr], 
+[103audio].[append_dat] AS [append_dat], 
+[103audio].[feet] AS [feet], 
+[103audio].[lbl_size] AS [lbl_size], 
+[103audio].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[103audio] AS [103audio]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="103ctrl" EntityType="Self.103ctrl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[103ctrl].[ID] AS [ID], 
+[103ctrl].[cable] AS [cable], 
+[103ctrl].[src_loc] AS [src_loc], 
+[103ctrl].[src_equip] AS [src_equip], 
+[103ctrl].[src_conn] AS [src_conn], 
+[103ctrl].[sh1] AS [sh1], 
+[103ctrl].[type] AS [type], 
+[103ctrl].[mult_pair] AS [mult_pair], 
+[103ctrl].[lnth] AS [lnth], 
+[103ctrl].[signal] AS [signal], 
+[103ctrl].[dst_loc] AS [dst_loc], 
+[103ctrl].[dst_equip] AS [dst_equip], 
+[103ctrl].[dst_conn] AS [dst_conn], 
+[103ctrl].[sh2] AS [sh2], 
+[103ctrl].[comments] AS [comments], 
+[103ctrl].[chng] AS [chng], 
+[103ctrl].[order_num] AS [order_num], 
+[103ctrl].[append_fr] AS [append_fr], 
+[103ctrl].[append_dat] AS [append_dat], 
+[103ctrl].[feet] AS [feet], 
+[103ctrl].[lbl_size] AS [lbl_size], 
+[103ctrl].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[103ctrl] AS [103ctrl]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="103video" EntityType="Self.103video" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[103video].[ID] AS [ID], 
+[103video].[cable] AS [cable], 
+[103video].[src_loc] AS [src_loc], 
+[103video].[src_equip] AS [src_equip], 
+[103video].[src_conn] AS [src_conn], 
+[103video].[sh1] AS [sh1], 
+[103video].[type] AS [type], 
+[103video].[mult_pair] AS [mult_pair], 
+[103video].[lnth] AS [lnth], 
+[103video].[signal] AS [signal], 
+[103video].[dst_loc] AS [dst_loc], 
+[103video].[dst_equip] AS [dst_equip], 
+[103video].[dst_conn] AS [dst_conn], 
+[103video].[sh2] AS [sh2], 
+[103video].[comments] AS [comments], 
+[103video].[chng] AS [chng], 
+[103video].[order_num] AS [order_num], 
+[103video].[append_fr] AS [append_fr], 
+[103video].[append_dat] AS [append_dat], 
+[103video].[feet] AS [feet], 
+[103video].[lbl_size] AS [lbl_size], 
+[103video].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[103video] AS [103video]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Audits" EntityType="Self.Audits" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Audits].[id] AS [id], 
+[Audits].[userEmail] AS [userEmail], 
+[Audits].[operation] AS [operation], 
+[Audits].[olddata] AS [olddata], 
+[Audits].[newdata] AS [newdata], 
+[Audits].[datetime] AS [datetime]
+FROM [dbo].[Audits] AS [Audits]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Buildings" EntityType="Self.Buildings" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Buildings].[BuildingID] AS [BuildingID], 
+[Buildings].[Description] AS [Description], 
+[Buildings].[Name] AS [Name], 
+[Buildings].[Code] AS [Code]
+FROM [dbo].[Buildings] AS [Buildings]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Buildings1" EntityType="Self.Buildings1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Buildings1].[BuildingID] AS [BuildingID], 
+[Buildings1].[Description] AS [Description], 
+[Buildings1].[Name] AS [Name], 
+[Buildings1].[Code] AS [Code]
+FROM [dbo].[Buildings1] AS [Buildings1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cables" EntityType="Self.Cables" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Cables].[CableID] AS [CableID], 
+[Cables].[SrcEquipmentID] AS [SrcEquipmentID], 
+[Cables].[SrcPort] AS [SrcPort], 
+[Cables].[SrcConnectorTypeID] AS [SrcConnectorTypeID], 
+[Cables].[SrcDrawingCode] AS [SrcDrawingCode], 
+[Cables].[DestEquipmentID] AS [DestEquipmentID], 
+[Cables].[DestPort] AS [DestPort], 
+[Cables].[DestConnectorTypeID] AS [DestConnectorTypeID], 
+[Cables].[DestDrawingCode] AS [DestDrawingCode], 
+[Cables].[CableTypeID] AS [CableTypeID], 
+[Cables].[Color] AS [Color], 
+[Cables].[Length] AS [Length], 
+[Cables].[Detail] AS [Detail], 
+[Cables].[Revision] AS [Revision], 
+[Cables].[LastUpdatedBy] AS [LastUpdatedBy], 
+[Cables].[LastUpdateDate] AS [LastUpdateDate], 
+[Cables].[CableCode] AS [CableCode], 
+[Cables].[Comments] AS [Comments], 
+[Cables].[Signal] AS [Signal], 
+[Cables].[SrcShield] AS [SrcShield], 
+[Cables].[DestShield] AS [DestShield], 
+[Cables].[CableDetail] AS [CableDetail], 
+[Cables].[SrcHostName] AS [SrcHostName], 
+[Cables].[SrcIPAddress] AS [SrcIPAddress], 
+[Cables].[DestHostName] AS [DestHostName], 
+[Cables].[DestIPAddress] AS [DestIPAddress], 
+[Cables].[SubRevision] AS [SubRevision], 
+[Cables].[SrcMake] AS [SrcMake], 
+[Cables].[SrcModel] AS [SrcModel], 
+[Cables].[DestMake] AS [DestMake], 
+[Cables].[DestModel] AS [DestModel], 
+[Cables].[Panel] AS [Panel], 
+[Cables].[Circuit] AS [Circuit], 
+[Cables].[PDU] AS [PDU], 
+[Cables].[MaxPower] AS [MaxPower], 
+[Cables].[ActionItem] AS [ActionItem]
+FROM [dbo].[Cables] AS [Cables]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cablesold" EntityType="Self.Cablesold" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Cablesold].[CableID] AS [CableID], 
+[Cablesold].[SrcEquipmentID] AS [SrcEquipmentID], 
+[Cablesold].[SrcPort] AS [SrcPort], 
+[Cablesold].[SrcConnectorTypeID] AS [SrcConnectorTypeID], 
+[Cablesold].[SrcDrawingCode] AS [SrcDrawingCode], 
+[Cablesold].[DestEquipmentID] AS [DestEquipmentID], 
+[Cablesold].[DestPort] AS [DestPort], 
+[Cablesold].[DestConnectorTypeID] AS [DestConnectorTypeID], 
+[Cablesold].[DestDrawingCode] AS [DestDrawingCode], 
+[Cablesold].[CableTypeID] AS [CableTypeID], 
+[Cablesold].[Color] AS [Color], 
+[Cablesold].[Length] AS [Length], 
+[Cablesold].[Detail] AS [Detail], 
+[Cablesold].[Revision] AS [Revision], 
+[Cablesold].[LastUpdatedBy] AS [LastUpdatedBy], 
+[Cablesold].[LastUpdateDate] AS [LastUpdateDate], 
+[Cablesold].[CableCode] AS [CableCode], 
+[Cablesold].[Comments] AS [Comments], 
+[Cablesold].[Signal] AS [Signal], 
+[Cablesold].[SrcShield] AS [SrcShield], 
+[Cablesold].[DestShield] AS [DestShield], 
+[Cablesold].[CableDetail] AS [CableDetail], 
+[Cablesold].[SrcHostName] AS [SrcHostName], 
+[Cablesold].[SrcIPAddress] AS [SrcIPAddress], 
+[Cablesold].[DestHostName] AS [DestHostName], 
+[Cablesold].[DestIPAddress] AS [DestIPAddress], 
+[Cablesold].[SubRevision] AS [SubRevision], 
+[Cablesold].[SrcMake] AS [SrcMake], 
+[Cablesold].[SrcModel] AS [SrcModel], 
+[Cablesold].[DestMake] AS [DestMake], 
+[Cablesold].[DestModel] AS [DestModel], 
+[Cablesold].[Panel] AS [Panel], 
+[Cablesold].[Circuit] AS [Circuit], 
+[Cablesold].[PDU] AS [PDU], 
+[Cablesold].[MaxPower] AS [MaxPower], 
+[Cablesold].[ActionItem] AS [ActionItem]
+FROM [dbo].[Cablesold] AS [Cablesold]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CableTypes" EntityType="Self.CableTypes" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[CableTypes].[CableTypeID] AS [CableTypeID], 
+[CableTypes].[Description] AS [Description], 
+[CableTypes].[Code] AS [Code]
+FROM [dbo].[CableTypes] AS [CableTypes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CableTypesold" EntityType="Self.CableTypesold" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[CableTypesold].[CableTypeID] AS [CableTypeID], 
+[CableTypesold].[Description] AS [Description], 
+[CableTypesold].[Code] AS [Code]
+FROM [dbo].[CableTypesold] AS [CableTypesold]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="castlists" EntityType="Self.castlists" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[castlists].[Id] AS [Id], 
+[castlists].[First_name] AS [First_name], 
+[castlists].[Last_name] AS [Last_name], 
+[castlists].[Specify_number] AS [Specify_number], 
+[castlists].[Show_name] AS [Show_name], 
+[castlists].[Type_of_Show] AS [Type_of_Show], 
+[castlists].[AppearedIn] AS [AppearedIn], 
+[castlists].[Role_played] AS [Role_played], 
+[castlists].[Credit] AS [Credit]
+FROM [dbo].[castlists] AS [castlists]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ConnectorTypes" EntityType="Self.ConnectorTypes" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[ConnectorTypes].[ConnectorTypeID] AS [ConnectorTypeID], 
+[ConnectorTypes].[Description] AS [Description], 
+[ConnectorTypes].[Code] AS [Code]
+FROM [dbo].[ConnectorTypes] AS [ConnectorTypes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ConnectorTypesold" EntityType="Self.ConnectorTypesold" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[ConnectorTypesold].[ConnectorTypeID] AS [ConnectorTypeID], 
+[ConnectorTypesold].[Description] AS [Description], 
+[ConnectorTypesold].[Code] AS [Code]
+FROM [dbo].[ConnectorTypesold] AS [ConnectorTypesold]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Equipments" EntityType="Self.Equipments" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Equipments].[EquipmentID] AS [EquipmentID], 
+[Equipments].[Description] AS [Description], 
+[Equipments].[Code] AS [Code], 
+[Equipments].[Type] AS [Type], 
+[Equipments].[RackID] AS [RackID], 
+[Equipments].[RoomID] AS [RoomID], 
+[Equipments].[EquipmentTypeID] AS [EquipmentTypeID]
+FROM [dbo].[Equipments] AS [Equipments]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Equipmentsold" EntityType="Self.Equipmentsold" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Equipmentsold].[EquipmentID] AS [EquipmentID], 
+[Equipmentsold].[Description] AS [Description], 
+[Equipmentsold].[Code] AS [Code], 
+[Equipmentsold].[Type] AS [Type], 
+[Equipmentsold].[RackID] AS [RackID], 
+[Equipmentsold].[RoomID] AS [RoomID], 
+[Equipmentsold].[EquipmentTypeID] AS [EquipmentTypeID]
+FROM [dbo].[Equipmentsold] AS [Equipmentsold]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EquipmentTypes" EntityType="Self.EquipmentTypes" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EquipmentTypes].[EquipmentTypeID] AS [EquipmentTypeID], 
+[EquipmentTypes].[Description] AS [Description], 
+[EquipmentTypes].[Code] AS [Code]
+FROM [dbo].[EquipmentTypes] AS [EquipmentTypes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EquipmentTypes1" EntityType="Self.EquipmentTypes1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EquipmentTypes1].[EquipmentTypeID] AS [EquipmentTypeID], 
+[EquipmentTypes1].[Description] AS [Description], 
+[EquipmentTypes1].[Code] AS [Code]
+FROM [dbo].[EquipmentTypes1] AS [EquipmentTypes1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Missing_Cables" EntityType="Self.Missing_Cables" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Missing_Cables].[CableCode] AS [CableCode], 
+[Missing_Cables].[Signal] AS [Signal]
+FROM [dbo].[Missing_Cables] AS [Missing_Cables]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nebaud" EntityType="Self.Nebaud" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Nebaud].[ID] AS [ID], 
+[Nebaud].[cable] AS [cable], 
+[Nebaud].[s] AS [s], 
+[Nebaud].[src_loc] AS [src_loc], 
+[Nebaud].[src_equip] AS [src_equip], 
+[Nebaud].[src_conn] AS [src_conn], 
+[Nebaud].[sh1] AS [sh1], 
+[Nebaud].[src_dtl] AS [src_dtl], 
+[Nebaud].[src_dwg] AS [src_dwg], 
+[Nebaud].[type] AS [type], 
+[Nebaud].[color] AS [color], 
+[Nebaud].[mult_pair] AS [mult_pair], 
+[Nebaud].[lnth] AS [lnth], 
+[Nebaud].[signal] AS [signal], 
+[Nebaud].[dst_loc] AS [dst_loc], 
+[Nebaud].[dst_equip] AS [dst_equip], 
+[Nebaud].[dst_conn] AS [dst_conn], 
+[Nebaud].[sh2] AS [sh2], 
+[Nebaud].[dst_dtl] AS [dst_dtl], 
+[Nebaud].[dst_dwg] AS [dst_dwg], 
+[Nebaud].[comments] AS [comments], 
+[Nebaud].[chng] AS [chng], 
+[Nebaud].[order_num] AS [order_num], 
+[Nebaud].[order_his] AS [order_his], 
+[Nebaud].[append_fr] AS [append_fr], 
+[Nebaud].[append_dat] AS [append_dat], 
+[Nebaud].[feet] AS [feet], 
+[Nebaud].[lbl_size] AS [lbl_size], 
+[Nebaud].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Nebaud] AS [Nebaud]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nebctl" EntityType="Self.Nebctl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Nebctl].[ID] AS [ID], 
+[Nebctl].[cable] AS [cable], 
+[Nebctl].[s] AS [s], 
+[Nebctl].[src_loc] AS [src_loc], 
+[Nebctl].[src_equip] AS [src_equip], 
+[Nebctl].[src_conn] AS [src_conn], 
+[Nebctl].[sh1] AS [sh1], 
+[Nebctl].[src_dtl] AS [src_dtl], 
+[Nebctl].[src_dwg] AS [src_dwg], 
+[Nebctl].[type] AS [type], 
+[Nebctl].[color] AS [color], 
+[Nebctl].[mult_pair] AS [mult_pair], 
+[Nebctl].[lnth] AS [lnth], 
+[Nebctl].[signal] AS [signal], 
+[Nebctl].[dst_loc] AS [dst_loc], 
+[Nebctl].[dst_equip] AS [dst_equip], 
+[Nebctl].[dst_conn] AS [dst_conn], 
+[Nebctl].[sh2] AS [sh2], 
+[Nebctl].[dst_dtl] AS [dst_dtl], 
+[Nebctl].[dst_dwg] AS [dst_dwg], 
+[Nebctl].[comments] AS [comments], 
+[Nebctl].[chng] AS [chng], 
+[Nebctl].[order_num] AS [order_num], 
+[Nebctl].[order_his] AS [order_his], 
+[Nebctl].[append_fr] AS [append_fr], 
+[Nebctl].[append_dat] AS [append_dat], 
+[Nebctl].[feet] AS [feet], 
+[Nebctl].[lbl_size] AS [lbl_size], 
+[Nebctl].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Nebctl] AS [Nebctl]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nebctl2" EntityType="Self.Nebctl2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Nebctl2].[ID] AS [ID], 
+[Nebctl2].[cable] AS [cable], 
+[Nebctl2].[src_loc] AS [src_loc], 
+[Nebctl2].[src_equip] AS [src_equip], 
+[Nebctl2].[src_conn] AS [src_conn], 
+[Nebctl2].[sh1] AS [sh1], 
+[Nebctl2].[type] AS [type], 
+[Nebctl2].[mult_pair] AS [mult_pair], 
+[Nebctl2].[lnth] AS [lnth], 
+[Nebctl2].[signal] AS [signal], 
+[Nebctl2].[dst_loc] AS [dst_loc], 
+[Nebctl2].[dst_equip] AS [dst_equip], 
+[Nebctl2].[dst_conn] AS [dst_conn], 
+[Nebctl2].[sh2] AS [sh2], 
+[Nebctl2].[comments] AS [comments], 
+[Nebctl2].[chng] AS [chng], 
+[Nebctl2].[order_num] AS [order_num], 
+[Nebctl2].[append_fr] AS [append_fr], 
+[Nebctl2].[append_dat] AS [append_dat], 
+[Nebctl2].[feet] AS [feet], 
+[Nebctl2].[lbl_size] AS [lbl_size], 
+[Nebctl2].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Nebctl2] AS [Nebctl2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nebvid" EntityType="Self.Nebvid" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Nebvid].[ID] AS [ID], 
+[Nebvid].[cable] AS [cable], 
+[Nebvid].[s] AS [s], 
+[Nebvid].[src_loc] AS [src_loc], 
+[Nebvid].[src_equip] AS [src_equip], 
+[Nebvid].[src_conn] AS [src_conn], 
+[Nebvid].[sh1] AS [sh1], 
+[Nebvid].[src_dtl] AS [src_dtl], 
+[Nebvid].[src_dwg] AS [src_dwg], 
+[Nebvid].[type] AS [type], 
+[Nebvid].[color] AS [color], 
+[Nebvid].[mult_pair] AS [mult_pair], 
+[Nebvid].[lnth] AS [lnth], 
+[Nebvid].[signal] AS [signal], 
+[Nebvid].[dst_loc] AS [dst_loc], 
+[Nebvid].[dst_equip] AS [dst_equip], 
+[Nebvid].[dst_conn] AS [dst_conn], 
+[Nebvid].[sh2] AS [sh2], 
+[Nebvid].[dst_dtl] AS [dst_dtl], 
+[Nebvid].[dst_dwg] AS [dst_dwg], 
+[Nebvid].[comments] AS [comments], 
+[Nebvid].[chng] AS [chng], 
+[Nebvid].[order_num] AS [order_num], 
+[Nebvid].[order_his] AS [order_his], 
+[Nebvid].[append_fr] AS [append_fr], 
+[Nebvid].[append_dat] AS [append_dat], 
+[Nebvid].[feet] AS [feet], 
+[Nebvid].[lbl_size] AS [lbl_size], 
+[Nebvid].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Nebvid] AS [Nebvid]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Racks" EntityType="Self.Racks" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Racks].[RackID] AS [RackID], 
+[Racks].[Description] AS [Description], 
+[Racks].[Code] AS [Code], 
+[Racks].[RoomID] AS [RoomID]
+FROM [dbo].[Racks] AS [Racks]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Racksold" EntityType="Self.Racksold" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Racksold].[RackID] AS [RackID], 
+[Racksold].[Description] AS [Description], 
+[Racksold].[Code] AS [Code], 
+[Racksold].[RoomID] AS [RoomID]
+FROM [dbo].[Racksold] AS [Racksold]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Rooms" EntityType="Self.Rooms" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Rooms].[RoomID] AS [RoomID], 
+[Rooms].[Description] AS [Description], 
+[Rooms].[Code] AS [Code], 
+[Rooms].[BuildingID] AS [BuildingID]
+FROM [dbo].[Rooms] AS [Rooms]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Rooms1" EntityType="Self.Rooms1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Rooms1].[RoomID] AS [RoomID], 
+[Rooms1].[Description] AS [Description], 
+[Rooms1].[Code] AS [Code], 
+[Rooms1].[BuildingID] AS [BuildingID]
+FROM [dbo].[Rooms1] AS [Rooms1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Totalaud" EntityType="Self.Totalaud" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Totalaud].[ID] AS [ID], 
+[Totalaud].[cable] AS [cable], 
+[Totalaud].[s] AS [s], 
+[Totalaud].[src_loc] AS [src_loc], 
+[Totalaud].[src_equip] AS [src_equip], 
+[Totalaud].[src_conn] AS [src_conn], 
+[Totalaud].[sh1] AS [sh1], 
+[Totalaud].[src_dtl] AS [src_dtl], 
+[Totalaud].[src_dwg] AS [src_dwg], 
+[Totalaud].[type] AS [type], 
+[Totalaud].[color] AS [color], 
+[Totalaud].[mult_pair] AS [mult_pair], 
+[Totalaud].[lnth] AS [lnth], 
+[Totalaud].[signal] AS [signal], 
+[Totalaud].[dst_loc] AS [dst_loc], 
+[Totalaud].[dst_equip] AS [dst_equip], 
+[Totalaud].[dst_conn] AS [dst_conn], 
+[Totalaud].[sh2] AS [sh2], 
+[Totalaud].[dst_dtl] AS [dst_dtl], 
+[Totalaud].[dst_dwg] AS [dst_dwg], 
+[Totalaud].[comments] AS [comments], 
+[Totalaud].[chng] AS [chng], 
+[Totalaud].[order_num] AS [order_num], 
+[Totalaud].[order_his] AS [order_his], 
+[Totalaud].[append_fr] AS [append_fr], 
+[Totalaud].[append_dat] AS [append_dat], 
+[Totalaud].[feet] AS [feet], 
+[Totalaud].[lbl_size] AS [lbl_size], 
+[Totalaud].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Totalaud] AS [Totalaud]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Totalctl" EntityType="Self.Totalctl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Totalctl].[ID] AS [ID], 
+[Totalctl].[cable] AS [cable], 
+[Totalctl].[s] AS [s], 
+[Totalctl].[src_loc] AS [src_loc], 
+[Totalctl].[src_equip] AS [src_equip], 
+[Totalctl].[src_conn] AS [src_conn], 
+[Totalctl].[sh1] AS [sh1], 
+[Totalctl].[src_dtl] AS [src_dtl], 
+[Totalctl].[src_dwg] AS [src_dwg], 
+[Totalctl].[type] AS [type], 
+[Totalctl].[color] AS [color], 
+[Totalctl].[mult_pair] AS [mult_pair], 
+[Totalctl].[lnth] AS [lnth], 
+[Totalctl].[signal] AS [signal], 
+[Totalctl].[dst_loc] AS [dst_loc], 
+[Totalctl].[dst_equip] AS [dst_equip], 
+[Totalctl].[dst_conn] AS [dst_conn], 
+[Totalctl].[sh2] AS [sh2], 
+[Totalctl].[dst_dtl] AS [dst_dtl], 
+[Totalctl].[dst_dwg] AS [dst_dwg], 
+[Totalctl].[comments] AS [comments], 
+[Totalctl].[chng] AS [chng], 
+[Totalctl].[order_num] AS [order_num], 
+[Totalctl].[order_his] AS [order_his], 
+[Totalctl].[append_fr] AS [append_fr], 
+[Totalctl].[append_dat] AS [append_dat], 
+[Totalctl].[feet] AS [feet], 
+[Totalctl].[lbl_size] AS [lbl_size], 
+[Totalctl].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Totalctl] AS [Totalctl]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Totaljet" EntityType="Self.Totaljet" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Totaljet].[ID] AS [ID], 
+[Totaljet].[cable] AS [cable], 
+[Totaljet].[src_loc] AS [src_loc], 
+[Totaljet].[src_equip] AS [src_equip], 
+[Totaljet].[src_conn] AS [src_conn], 
+[Totaljet].[sh1] AS [sh1], 
+[Totaljet].[type] AS [type], 
+[Totaljet].[mult_pair] AS [mult_pair], 
+[Totaljet].[lnth] AS [lnth], 
+[Totaljet].[signal] AS [signal], 
+[Totaljet].[dst_loc] AS [dst_loc], 
+[Totaljet].[dst_equip] AS [dst_equip], 
+[Totaljet].[dst_conn] AS [dst_conn], 
+[Totaljet].[sh2] AS [sh2], 
+[Totaljet].[comments] AS [comments], 
+[Totaljet].[chng] AS [chng], 
+[Totaljet].[order_num] AS [order_num], 
+[Totaljet].[append_fr] AS [append_fr], 
+[Totaljet].[append_dat] AS [append_dat], 
+[Totaljet].[feet] AS [feet], 
+[Totaljet].[lbl_size] AS [lbl_size], 
+[Totaljet].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Totaljet] AS [Totaljet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Totalvid" EntityType="Self.Totalvid" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Totalvid].[ID] AS [ID], 
+[Totalvid].[cable] AS [cable], 
+[Totalvid].[s] AS [s], 
+[Totalvid].[src_loc] AS [src_loc], 
+[Totalvid].[src_equip] AS [src_equip], 
+[Totalvid].[src_conn] AS [src_conn], 
+[Totalvid].[sh1] AS [sh1], 
+[Totalvid].[src_dtl] AS [src_dtl], 
+[Totalvid].[src_dwg] AS [src_dwg], 
+[Totalvid].[type] AS [type], 
+[Totalvid].[color] AS [color], 
+[Totalvid].[mult_pair] AS [mult_pair], 
+[Totalvid].[lnth] AS [lnth], 
+[Totalvid].[signal] AS [signal], 
+[Totalvid].[dst_loc] AS [dst_loc], 
+[Totalvid].[dst_equip] AS [dst_equip], 
+[Totalvid].[dst_conn] AS [dst_conn], 
+[Totalvid].[sh2] AS [sh2], 
+[Totalvid].[dst_dtl] AS [dst_dtl], 
+[Totalvid].[dst_dwg] AS [dst_dwg], 
+[Totalvid].[comments] AS [comments], 
+[Totalvid].[chng] AS [chng], 
+[Totalvid].[order_num] AS [order_num], 
+[Totalvid].[order_his] AS [order_his], 
+[Totalvid].[append_fr] AS [append_fr], 
+[Totalvid].[append_dat] AS [append_dat], 
+[Totalvid].[feet] AS [feet], 
+[Totalvid].[lbl_size] AS [lbl_size], 
+[Totalvid].[_dbaselock] AS [_dbaselock]
+FROM [dbo].[Totalvid] AS [Totalvid]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UserRoles" EntityType="Self.UserRoles" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[UserRoles].[Id] AS [Id], 
+[UserRoles].[Email] AS [Email], 
+[UserRoles].[Role] AS [Role]
+FROM [dbo].[UserRoles] AS [UserRoles]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NeoCableMsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PrintJob">
+          <Key>
+            <PropertyRef Name="PrintJobID" />
+          </Key>
+          <Property Name="PrintJobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Token" Type="Guid" Nullable="false" />
+          <Property Name="CablesToPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C103audio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C103ctrl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C103video">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Audit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="operation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="olddata" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="newdata" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="datetime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Building">
+          <Key>
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="BuildingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Buildings1">
+          <Key>
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="BuildingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Cable">
+          <Key>
+            <PropertyRef Name="CableID" />
+            <PropertyRef Name="SrcEquipmentID" />
+            <PropertyRef Name="SrcConnectorTypeID" />
+            <PropertyRef Name="DestEquipmentID" />
+            <PropertyRef Name="DestConnectorTypeID" />
+            <PropertyRef Name="CableTypeID" />
+            <PropertyRef Name="Length" />
+            <PropertyRef Name="CableCode" />
+            <PropertyRef Name="MaxPower" />
+          </Key>
+          <Property Name="CableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SrcEquipmentID" Type="Int32" Nullable="false" />
+          <Property Name="SrcPort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcConnectorTypeID" Type="Int32" Nullable="false" />
+          <Property Name="SrcDrawingCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestEquipmentID" Type="Int32" Nullable="false" />
+          <Property Name="DestPort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestConnectorTypeID" Type="Int32" Nullable="false" />
+          <Property Name="DestDrawingCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CableTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Length" Type="Int32" Nullable="false" />
+          <Property Name="Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Revision" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdateDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CableCode" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Signal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcShield" Type="Boolean" />
+          <Property Name="DestShield" Type="Boolean" />
+          <Property Name="CableDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcHostName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcIPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestHostName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestIPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubRevision" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcMake" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcModel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestMake" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestModel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Panel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Circuit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PDU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaxPower" Type="Double" Nullable="false" />
+          <Property Name="ActionItem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Cablesold">
+          <Key>
+            <PropertyRef Name="CableID" />
+            <PropertyRef Name="SrcEquipmentID" />
+            <PropertyRef Name="SrcConnectorTypeID" />
+            <PropertyRef Name="DestEquipmentID" />
+            <PropertyRef Name="DestConnectorTypeID" />
+            <PropertyRef Name="CableTypeID" />
+            <PropertyRef Name="Length" />
+            <PropertyRef Name="CableCode" />
+            <PropertyRef Name="MaxPower" />
+          </Key>
+          <Property Name="CableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SrcEquipmentID" Type="Int32" Nullable="false" />
+          <Property Name="SrcPort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcConnectorTypeID" Type="Int32" Nullable="false" />
+          <Property Name="SrcDrawingCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestEquipmentID" Type="Int32" Nullable="false" />
+          <Property Name="DestPort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestConnectorTypeID" Type="Int32" Nullable="false" />
+          <Property Name="DestDrawingCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CableTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Length" Type="Int32" Nullable="false" />
+          <Property Name="Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Revision" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdateDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CableCode" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Signal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcShield" Type="Boolean" />
+          <Property Name="DestShield" Type="Boolean" />
+          <Property Name="CableDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcHostName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcIPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestHostName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestIPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubRevision" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcMake" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SrcModel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestMake" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestModel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Panel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Circuit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PDU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaxPower" Type="Double" Nullable="false" />
+          <Property Name="ActionItem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CableType">
+          <Key>
+            <PropertyRef Name="CableTypeID" />
+          </Key>
+          <Property Name="CableTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CableTypesold">
+          <Key>
+            <PropertyRef Name="CableTypeID" />
+          </Key>
+          <Property Name="CableTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="castlist">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="First_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Last_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Specify_number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Show_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type_of_Show" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AppearedIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Role_played" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Credit" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ConnectorType">
+          <Key>
+            <PropertyRef Name="ConnectorTypeID" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="ConnectorTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConnectorTypesold">
+          <Key>
+            <PropertyRef Name="ConnectorTypeID" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="ConnectorTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Equipment">
+          <Key>
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RackID" Type="Int32" Nullable="false" />
+          <Property Name="RoomID" Type="Int32" Nullable="false" />
+          <Property Name="EquipmentTypeID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Equipmentsold">
+          <Key>
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RackID" Type="Int32" Nullable="false" />
+          <Property Name="RoomID" Type="Int32" Nullable="false" />
+          <Property Name="EquipmentTypeID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EquipmentType">
+          <Key>
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EquipmentTypes1">
+          <Key>
+            <PropertyRef Name="EquipmentTypeID" />
+          </Key>
+          <Property Name="EquipmentTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Missing_Cables">
+          <Key>
+            <PropertyRef Name="CableCode" />
+          </Key>
+          <Property Name="CableCode" Type="Int32" Nullable="false" />
+          <Property Name="Signal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Nebaud">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="s" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order_his" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Nebctl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="s" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order_his" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Nebctl2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Nebvid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="s" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order_his" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Rack">
+          <Key>
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RackID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RoomID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Racksold">
+          <Key>
+            <PropertyRef Name="RackID" />
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RackID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RoomID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BuildingID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rooms1">
+          <Key>
+            <PropertyRef Name="RoomID" />
+            <PropertyRef Name="BuildingID" />
+          </Key>
+          <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BuildingID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Totalaud">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="s" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order_his" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Totalctl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="s" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order_his" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Totaljet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Totalvid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="cable" Type="Int32" />
+          <Property Name="s" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="src_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mult_pair" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lnth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="signal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_equip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_conn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sh2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dtl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dst_dwg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="chng" Type="DateTime" Precision="3" />
+          <Property Name="order_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order_his" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_fr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="append_dat" Type="DateTime" Precision="3" />
+          <Property Name="feet" Type="Int32" />
+          <Property Name="lbl_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_dbaselock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Role" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="NeoCableMsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PrintJobs" EntityType="Self.PrintJob" />
+          <EntitySet Name="C103audio" EntityType="Self.C103audio" />
+          <EntitySet Name="C103ctrl" EntityType="Self.C103ctrl" />
+          <EntitySet Name="C103video" EntityType="Self.C103video" />
+          <EntitySet Name="Audits" EntityType="Self.Audit" />
+          <EntitySet Name="Buildings" EntityType="Self.Building" />
+          <EntitySet Name="Buildings1" EntityType="Self.Buildings1" />
+          <EntitySet Name="Cables" EntityType="Self.Cable" />
+          <EntitySet Name="Cablesolds" EntityType="Self.Cablesold" />
+          <EntitySet Name="CableTypes" EntityType="Self.CableType" />
+          <EntitySet Name="CableTypesolds" EntityType="Self.CableTypesold" />
+          <EntitySet Name="castlists" EntityType="Self.castlist" />
+          <EntitySet Name="ConnectorTypes" EntityType="Self.ConnectorType" />
+          <EntitySet Name="ConnectorTypesolds" EntityType="Self.ConnectorTypesold" />
+          <EntitySet Name="Equipments" EntityType="Self.Equipment" />
+          <EntitySet Name="Equipmentsolds" EntityType="Self.Equipmentsold" />
+          <EntitySet Name="EquipmentTypes" EntityType="Self.EquipmentType" />
+          <EntitySet Name="EquipmentTypes1" EntityType="Self.EquipmentTypes1" />
+          <EntitySet Name="Missing_Cables" EntityType="Self.Missing_Cables" />
+          <EntitySet Name="Nebauds" EntityType="Self.Nebaud" />
+          <EntitySet Name="Nebctls" EntityType="Self.Nebctl" />
+          <EntitySet Name="Nebctl2" EntityType="Self.Nebctl2" />
+          <EntitySet Name="Nebvids" EntityType="Self.Nebvid" />
+          <EntitySet Name="Racks" EntityType="Self.Rack" />
+          <EntitySet Name="Racksolds" EntityType="Self.Racksold" />
+          <EntitySet Name="Rooms" EntityType="Self.Room" />
+          <EntitySet Name="Rooms1" EntityType="Self.Rooms1" />
+          <EntitySet Name="Totalauds" EntityType="Self.Totalaud" />
+          <EntitySet Name="Totalctls" EntityType="Self.Totalctl" />
+          <EntitySet Name="Totaljets" EntityType="Self.Totaljet" />
+          <EntitySet Name="Totalvids" EntityType="Self.Totalvid" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NeoCableMsModelStoreContainer" CdmEntityContainer="NeoCableMsEntities">
+          <EntitySetMapping Name="PrintJobs">
+            <EntityTypeMapping TypeName="NeoCableMsModel.PrintJob">
+              <MappingFragment StoreEntitySet="PrintJobs">
+                <ScalarProperty Name="PrintJobID" ColumnName="PrintJobID" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="CablesToPrint" ColumnName="CablesToPrint" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C103audio">
+            <EntityTypeMapping TypeName="NeoCableMsModel.C103audio">
+              <MappingFragment StoreEntitySet="103audio">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C103ctrl">
+            <EntityTypeMapping TypeName="NeoCableMsModel.C103ctrl">
+              <MappingFragment StoreEntitySet="103ctrl">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C103video">
+            <EntityTypeMapping TypeName="NeoCableMsModel.C103video">
+              <MappingFragment StoreEntitySet="103video">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Audits">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Audit">
+              <MappingFragment StoreEntitySet="Audits">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+                <ScalarProperty Name="operation" ColumnName="operation" />
+                <ScalarProperty Name="olddata" ColumnName="olddata" />
+                <ScalarProperty Name="newdata" ColumnName="newdata" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Buildings">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Building">
+              <MappingFragment StoreEntitySet="Buildings">
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Buildings1">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Buildings1">
+              <MappingFragment StoreEntitySet="Buildings1">
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cables">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Cable">
+              <MappingFragment StoreEntitySet="Cables">
+                <ScalarProperty Name="CableID" ColumnName="CableID" />
+                <ScalarProperty Name="SrcEquipmentID" ColumnName="SrcEquipmentID" />
+                <ScalarProperty Name="SrcPort" ColumnName="SrcPort" />
+                <ScalarProperty Name="SrcConnectorTypeID" ColumnName="SrcConnectorTypeID" />
+                <ScalarProperty Name="SrcDrawingCode" ColumnName="SrcDrawingCode" />
+                <ScalarProperty Name="DestEquipmentID" ColumnName="DestEquipmentID" />
+                <ScalarProperty Name="DestPort" ColumnName="DestPort" />
+                <ScalarProperty Name="DestConnectorTypeID" ColumnName="DestConnectorTypeID" />
+                <ScalarProperty Name="DestDrawingCode" ColumnName="DestDrawingCode" />
+                <ScalarProperty Name="CableTypeID" ColumnName="CableTypeID" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="CableCode" ColumnName="CableCode" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Signal" ColumnName="Signal" />
+                <ScalarProperty Name="SrcShield" ColumnName="SrcShield" />
+                <ScalarProperty Name="DestShield" ColumnName="DestShield" />
+                <ScalarProperty Name="CableDetail" ColumnName="CableDetail" />
+                <ScalarProperty Name="SrcHostName" ColumnName="SrcHostName" />
+                <ScalarProperty Name="SrcIPAddress" ColumnName="SrcIPAddress" />
+                <ScalarProperty Name="DestHostName" ColumnName="DestHostName" />
+                <ScalarProperty Name="DestIPAddress" ColumnName="DestIPAddress" />
+                <ScalarProperty Name="SubRevision" ColumnName="SubRevision" />
+                <ScalarProperty Name="SrcMake" ColumnName="SrcMake" />
+                <ScalarProperty Name="SrcModel" ColumnName="SrcModel" />
+                <ScalarProperty Name="DestMake" ColumnName="DestMake" />
+                <ScalarProperty Name="DestModel" ColumnName="DestModel" />
+                <ScalarProperty Name="Panel" ColumnName="Panel" />
+                <ScalarProperty Name="Circuit" ColumnName="Circuit" />
+                <ScalarProperty Name="PDU" ColumnName="PDU" />
+                <ScalarProperty Name="MaxPower" ColumnName="MaxPower" />
+                <ScalarProperty Name="ActionItem" ColumnName="ActionItem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cablesolds">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Cablesold">
+              <MappingFragment StoreEntitySet="Cablesold">
+                <ScalarProperty Name="CableID" ColumnName="CableID" />
+                <ScalarProperty Name="SrcEquipmentID" ColumnName="SrcEquipmentID" />
+                <ScalarProperty Name="SrcPort" ColumnName="SrcPort" />
+                <ScalarProperty Name="SrcConnectorTypeID" ColumnName="SrcConnectorTypeID" />
+                <ScalarProperty Name="SrcDrawingCode" ColumnName="SrcDrawingCode" />
+                <ScalarProperty Name="DestEquipmentID" ColumnName="DestEquipmentID" />
+                <ScalarProperty Name="DestPort" ColumnName="DestPort" />
+                <ScalarProperty Name="DestConnectorTypeID" ColumnName="DestConnectorTypeID" />
+                <ScalarProperty Name="DestDrawingCode" ColumnName="DestDrawingCode" />
+                <ScalarProperty Name="CableTypeID" ColumnName="CableTypeID" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="CableCode" ColumnName="CableCode" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Signal" ColumnName="Signal" />
+                <ScalarProperty Name="SrcShield" ColumnName="SrcShield" />
+                <ScalarProperty Name="DestShield" ColumnName="DestShield" />
+                <ScalarProperty Name="CableDetail" ColumnName="CableDetail" />
+                <ScalarProperty Name="SrcHostName" ColumnName="SrcHostName" />
+                <ScalarProperty Name="SrcIPAddress" ColumnName="SrcIPAddress" />
+                <ScalarProperty Name="DestHostName" ColumnName="DestHostName" />
+                <ScalarProperty Name="DestIPAddress" ColumnName="DestIPAddress" />
+                <ScalarProperty Name="SubRevision" ColumnName="SubRevision" />
+                <ScalarProperty Name="SrcMake" ColumnName="SrcMake" />
+                <ScalarProperty Name="SrcModel" ColumnName="SrcModel" />
+                <ScalarProperty Name="DestMake" ColumnName="DestMake" />
+                <ScalarProperty Name="DestModel" ColumnName="DestModel" />
+                <ScalarProperty Name="Panel" ColumnName="Panel" />
+                <ScalarProperty Name="Circuit" ColumnName="Circuit" />
+                <ScalarProperty Name="PDU" ColumnName="PDU" />
+                <ScalarProperty Name="MaxPower" ColumnName="MaxPower" />
+                <ScalarProperty Name="ActionItem" ColumnName="ActionItem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CableTypes">
+            <EntityTypeMapping TypeName="NeoCableMsModel.CableType">
+              <MappingFragment StoreEntitySet="CableTypes">
+                <ScalarProperty Name="CableTypeID" ColumnName="CableTypeID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CableTypesolds">
+            <EntityTypeMapping TypeName="NeoCableMsModel.CableTypesold">
+              <MappingFragment StoreEntitySet="CableTypesold">
+                <ScalarProperty Name="CableTypeID" ColumnName="CableTypeID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="castlists">
+            <EntityTypeMapping TypeName="NeoCableMsModel.castlist">
+              <MappingFragment StoreEntitySet="castlists">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+                <ScalarProperty Name="Specify_number" ColumnName="Specify_number" />
+                <ScalarProperty Name="Show_name" ColumnName="Show_name" />
+                <ScalarProperty Name="Type_of_Show" ColumnName="Type_of_Show" />
+                <ScalarProperty Name="AppearedIn" ColumnName="AppearedIn" />
+                <ScalarProperty Name="Role_played" ColumnName="Role_played" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConnectorTypes">
+            <EntityTypeMapping TypeName="NeoCableMsModel.ConnectorType">
+              <MappingFragment StoreEntitySet="ConnectorTypes">
+                <ScalarProperty Name="ConnectorTypeID" ColumnName="ConnectorTypeID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConnectorTypesolds">
+            <EntityTypeMapping TypeName="NeoCableMsModel.ConnectorTypesold">
+              <MappingFragment StoreEntitySet="ConnectorTypesold">
+                <ScalarProperty Name="ConnectorTypeID" ColumnName="ConnectorTypeID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipments">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Equipment">
+              <MappingFragment StoreEntitySet="Equipments">
+                <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="RackID" ColumnName="RackID" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="EquipmentTypeID" ColumnName="EquipmentTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipmentsolds">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Equipmentsold">
+              <MappingFragment StoreEntitySet="Equipmentsold">
+                <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="RackID" ColumnName="RackID" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="EquipmentTypeID" ColumnName="EquipmentTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EquipmentTypes">
+            <EntityTypeMapping TypeName="NeoCableMsModel.EquipmentType">
+              <MappingFragment StoreEntitySet="EquipmentTypes">
+                <ScalarProperty Name="EquipmentTypeID" ColumnName="EquipmentTypeID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EquipmentTypes1">
+            <EntityTypeMapping TypeName="NeoCableMsModel.EquipmentTypes1">
+              <MappingFragment StoreEntitySet="EquipmentTypes1">
+                <ScalarProperty Name="EquipmentTypeID" ColumnName="EquipmentTypeID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Missing_Cables">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Missing_Cables">
+              <MappingFragment StoreEntitySet="Missing_Cables">
+                <ScalarProperty Name="CableCode" ColumnName="CableCode" />
+                <ScalarProperty Name="Signal" ColumnName="Signal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nebauds">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Nebaud">
+              <MappingFragment StoreEntitySet="Nebaud">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="s" ColumnName="s" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="src_dtl" ColumnName="src_dtl" />
+                <ScalarProperty Name="src_dwg" ColumnName="src_dwg" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="dst_dtl" ColumnName="dst_dtl" />
+                <ScalarProperty Name="dst_dwg" ColumnName="dst_dwg" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="order_his" ColumnName="order_his" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nebctls">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Nebctl">
+              <MappingFragment StoreEntitySet="Nebctl">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="s" ColumnName="s" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="src_dtl" ColumnName="src_dtl" />
+                <ScalarProperty Name="src_dwg" ColumnName="src_dwg" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="dst_dtl" ColumnName="dst_dtl" />
+                <ScalarProperty Name="dst_dwg" ColumnName="dst_dwg" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="order_his" ColumnName="order_his" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nebctl2">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Nebctl2">
+              <MappingFragment StoreEntitySet="Nebctl2">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nebvids">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Nebvid">
+              <MappingFragment StoreEntitySet="Nebvid">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="s" ColumnName="s" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="src_dtl" ColumnName="src_dtl" />
+                <ScalarProperty Name="src_dwg" ColumnName="src_dwg" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="dst_dtl" ColumnName="dst_dtl" />
+                <ScalarProperty Name="dst_dwg" ColumnName="dst_dwg" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="order_his" ColumnName="order_his" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Racks">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Rack">
+              <MappingFragment StoreEntitySet="Racks">
+                <ScalarProperty Name="RackID" ColumnName="RackID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Racksolds">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Racksold">
+              <MappingFragment StoreEntitySet="Racksold">
+                <ScalarProperty Name="RackID" ColumnName="RackID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Room">
+              <MappingFragment StoreEntitySet="Rooms">
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms1">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Rooms1">
+              <MappingFragment StoreEntitySet="Rooms1">
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Totalauds">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Totalaud">
+              <MappingFragment StoreEntitySet="Totalaud">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="s" ColumnName="s" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="src_dtl" ColumnName="src_dtl" />
+                <ScalarProperty Name="src_dwg" ColumnName="src_dwg" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="dst_dtl" ColumnName="dst_dtl" />
+                <ScalarProperty Name="dst_dwg" ColumnName="dst_dwg" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="order_his" ColumnName="order_his" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Totalctls">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Totalctl">
+              <MappingFragment StoreEntitySet="Totalctl">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="s" ColumnName="s" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="src_dtl" ColumnName="src_dtl" />
+                <ScalarProperty Name="src_dwg" ColumnName="src_dwg" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="dst_dtl" ColumnName="dst_dtl" />
+                <ScalarProperty Name="dst_dwg" ColumnName="dst_dwg" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="order_his" ColumnName="order_his" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Totaljets">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Totaljet">
+              <MappingFragment StoreEntitySet="Totaljet">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Totalvids">
+            <EntityTypeMapping TypeName="NeoCableMsModel.Totalvid">
+              <MappingFragment StoreEntitySet="Totalvid">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cable" ColumnName="cable" />
+                <ScalarProperty Name="s" ColumnName="s" />
+                <ScalarProperty Name="src_loc" ColumnName="src_loc" />
+                <ScalarProperty Name="src_equip" ColumnName="src_equip" />
+                <ScalarProperty Name="src_conn" ColumnName="src_conn" />
+                <ScalarProperty Name="sh1" ColumnName="sh1" />
+                <ScalarProperty Name="src_dtl" ColumnName="src_dtl" />
+                <ScalarProperty Name="src_dwg" ColumnName="src_dwg" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="mult_pair" ColumnName="mult_pair" />
+                <ScalarProperty Name="lnth" ColumnName="lnth" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="dst_loc" ColumnName="dst_loc" />
+                <ScalarProperty Name="dst_equip" ColumnName="dst_equip" />
+                <ScalarProperty Name="dst_conn" ColumnName="dst_conn" />
+                <ScalarProperty Name="sh2" ColumnName="sh2" />
+                <ScalarProperty Name="dst_dtl" ColumnName="dst_dtl" />
+                <ScalarProperty Name="dst_dwg" ColumnName="dst_dwg" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="chng" ColumnName="chng" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="order_his" ColumnName="order_his" />
+                <ScalarProperty Name="append_fr" ColumnName="append_fr" />
+                <ScalarProperty Name="append_dat" ColumnName="append_dat" />
+                <ScalarProperty Name="feet" ColumnName="feet" />
+                <ScalarProperty Name="lbl_size" ColumnName="lbl_size" />
+                <ScalarProperty Name="C_dbaselock" ColumnName="_dbaselock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="NeoCableMsModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
